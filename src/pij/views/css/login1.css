@@ -1,0 +1,45 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.login-bg{
+    -fx-background-color: linear-gradient(to top,#c31399,#9118fd);
+}
+
+.btn-login{
+    -fx-background-color: #9013fb;
+    -fx-text-fill: #FFF;
+    -fx-font-weight:700;
+    -fx-font-size:15px;
+    -fx-background-radius:8px;
+}
+
+.lbl-status{
+    -fx-background-color: #c0139f;
+    -fx-text-fill: #FFF;
+    -fx-alignment :CENTER;
+    -fx-font-size: 16px;
+    -fx-background-radius:8px;
+}
+
+.lbl-user{
+    -fx-text-fill: black;
+    -fx-alignment :CENTER;
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+}
+
+.tab-pane{
+    -fx-tab-max-height:0px;
+}
+.tab-pane .tab-header-area{
+    visibility:hidden;
+}
+
+.account-bg{
+    -fx-background-color: linear-gradient(to top,#0082bc,#01d8db); 
+}

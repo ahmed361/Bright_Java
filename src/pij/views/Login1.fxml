@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="rootPane" stylesheets="@css/login1.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pij.controller.Login1Controller">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="644.0" prefWidth="940.0" styleClass="login-bg" stylesheets="@css/login1.css">
+         <children>
+            <AnchorPane layoutX="84.0" layoutY="167.0" style="-fx-border-radius: 20px; -fx-background-radius: 20px;">
+               <children>
+                  <ImageView fitHeight="312.0" fitWidth="554.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/1.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutX="477.0" layoutY="97.0" prefHeight="433.0" prefWidth="397.0" style="-fx-background-color: #ffff; -fx-background-radius: 10px;">
+               <effect>
+                  <DropShadow color="#320619" />
+               </effect>
+               <children>
+                  <TabPane fx:id="tabPaneLogin" layoutX="16.0" layoutY="98.0" prefHeight="281.0" prefWidth="371.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="tabAdmin" text="Admin">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="231.0" prefWidth="371.0">
+                                 <children>
+                                    <TextField fx:id="textUsername" layoutX="34.0" layoutY="41.0" prefHeight="33.0" prefWidth="298.0" promptText="Admin Username" style="-fx-font-weight: bold; -fx-font-size: 18;">
+                                       <effect>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant color="#bbb5bb" />
+                                             </light>
+                                          </Lighting>
+                                       </effect>
+                                    </TextField>
+                                    <PasswordField fx:id="textPassword" layoutX="34.0" layoutY="113.0" prefHeight="33.0" prefWidth="298.0" promptText="Admin Password" style="-fx-font-weight: bold; -fx-font-size: 18;">
+                                       <effect>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant color="#bbb5bb" />
+                                             </light>
+                                          </Lighting>
+                                       </effect>
+                                    </PasswordField>
+                                    <Button fx:id="btnLogin" layoutX="130.0" layoutY="195.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="35.0" prefWidth="103.0" styleClass="btn-login" text="Login" />
+                                    <Label fx:id="btnForgot" layoutX="127.0" layoutY="234.0" style="-fx-text-fill: #9013fb;" text="Forgot password ?" />
+                                    <Label fx:id="lblErrors" layoutX="127.0" layoutY="162.0" style="-fx-text-fill: #B22222;" textAlignment="CENTER" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="tabUser" text="User">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="231.0" prefWidth="371.0">
+                                 <children>
+                                    <TextField layoutX="28.0" layoutY="41.0" prefHeight="33.0" prefWidth="307.0" promptText="username" style="-fx-font-weight: bold; -fx-font-size: 18;">
+                                       <effect>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant color="#bbb5bb" />
+                                             </light>
+                                          </Lighting>
+                                       </effect>
+                                    </TextField>
+                                    <PasswordField layoutX="28.0" layoutY="113.0" prefHeight="33.0" prefWidth="309.0" promptText="password" style="-fx-font-weight: bold; -fx-font-size: 18;">
+                                       <effect>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant color="#bbb5bb" />
+                                             </light>
+                                          </Lighting>
+                                       </effect>
+                                    </PasswordField>
+                                    <Button layoutX="130.0" layoutY="182.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="103.0" styleClass="btn-login" text="Login" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+                  <Label fx:id="lblCreateAccount" layoutX="70.0" layoutY="402.0" maxWidth="285.0" onMouseClicked="#openCreateAccountScene" prefHeight="19.0" prefWidth="285.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Nouveau utilisateur ? Créer un compte ">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow color="#e800a2" />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="#e100e1" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Label>
+                  <Group layoutX="33.0" layoutY="55.0">
+                     <children>
+                        <Pane fx:id="slidingPane" prefHeight="35.0" prefWidth="332.0">
+                           <children>
+                              <Label fx:id="lblAdmin" onMouseClicked="#openAdminTab" prefHeight="35.0" prefWidth="150.0" styleClass="lbl-user" text="ADMIN">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <Label fx:id="lblUser" layoutX="186.0" onMouseClicked="#openUserTab" prefHeight="35.0" prefWidth="150.0" styleClass="lbl-user" text="USER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Label fx:id="lblStatus" layoutX="1.0" prefHeight="35.0" prefWidth="160.0" styleClass="lbl-status" text="Administrateur" />
+                     </children>
+                  </Group>
+               </children>
+            </AnchorPane>
+            <Label fx:id="lbl_close" layoutX="921.0" layoutY="5.0" onMouseClicked="#handleButtonAction" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #FFF;" text="X" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

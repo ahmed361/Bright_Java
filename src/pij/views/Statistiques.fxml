@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="table" prefHeight="600.0" prefWidth="906.0" styleClass="mainFxmlClass" stylesheets="@css/statistiques.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pij.controller.StatistiquesController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="52.0" prefHeight="504.0" prefWidth="617.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+         <children>
+            <Text fill="#700bff" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistiques du répartion géographique des membres" textAlignment="CENTER" wrappingWidth="319.6474609375">
+               <VBox.margin>
+                  
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               
+            </Text>
+            <Pane fx:id="pane" prefHeight="600.0" prefWidth="906.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+     
+   </children>
+</AnchorPane>

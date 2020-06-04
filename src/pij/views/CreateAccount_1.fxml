@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorpane" prefHeight="400.0" prefWidth="600.0" styleClass="account-bg" stylesheets="@css/login1.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pij.controller.CreateAccountController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="window_signup" layoutX="10.0" layoutY="10.0" prefHeight="644.0" prefWidth="940.0" styleClass="account-bg" stylesheets="@css/login1.css">
+         <children>
+            <AnchorPane fx:id="window_otp" layoutX="84.0" layoutY="167.0" style="-fx-border-radius: 20px; -fx-background-radius: 20px;">
+               <children>
+                  <ImageView fitHeight="312.0" fitWidth="554.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/1.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutX="477.0" layoutY="37.0" prefHeight="591.0" prefWidth="397.0" style="-fx-background-color: #ffff; -fx-background-radius: 10px;">
+               <effect>
+                  <DropShadow color="#320619" />
+               </effect>
+               <children>
+                  <TextField fx:id="text_email_user" layoutX="43.0" layoutY="128.0" prefHeight="33.0" prefWidth="307.0" promptText="email" style="-fx-font-weight: bold; -fx-font-size: 18;">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="#bbb5bb" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </TextField>
+                  <Button fx:id="btn_signup" layoutX="140.0" layoutY="479.0" mnemonicParsing="false" onAction="#signup2" prefHeight="35.0" prefWidth="103.0" styleClass="btn-login" text="Sign Up" />
+                  <Label fx:id="lblLogin" layoutX="130.0" layoutY="536.0" maxWidth="285.0" onMouseClicked="#openLoginScene" prefHeight="21.0" prefWidth="129.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="I have an account" textFill="#f51987">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <ComboBox fx:id="cboRole" layoutX="44.0" layoutY="414.0" prefHeight="37.0" prefWidth="306.0" promptText="Role" />
+                  <Label layoutX="118.0" layoutY="15.0" style="-fx-font-size: 18; -fx-font-weight: bold;" text="CREATE ACCOUNT" textFill="#f51987" />
+                  <Label fx:id="lblEmailError" layoutX="46.0" layoutY="188.0" style="-fx-text-fill: #c0139f;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPasswordError" layoutX="47.0" layoutY="316.0" style="-fx-text-fill: #c0139f;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="text_password_user" layoutX="43.0" layoutY="205.0" prefHeight="33.0" prefWidth="309.0" promptText="Password" style="-fx-font-weight: bold; -fx-font-size: 18;">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="#bbb5bb" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </PasswordField>
+                  <PasswordField fx:id="text_password_confirm_user" layoutX="43.0" layoutY="263.0" prefHeight="33.0" prefWidth="309.0" promptText="Confirm Password" style="-fx-font-weight: bold; -fx-font-size: 18;">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="#bbb5bb" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </PasswordField>
+                  <TextField fx:id="text_username_user" layoutX="43.0" layoutY="69.0" prefHeight="33.0" prefWidth="307.0" promptText="Username" style="-fx-font-weight: bold; -fx-font-size: 18;">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="#bbb5bb" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </TextField>
+                  <ComboBox fx:id="cboDomain" layoutX="43.0" layoutY="351.0" prefHeight="39.0" prefWidth="306.0" promptText="Domain" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

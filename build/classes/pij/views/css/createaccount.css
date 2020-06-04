@@ -1,0 +1,11 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.account-bg{
+    -fx-background-color: linear-gradient(to top,#0082bc,#01d8db); 
+}
